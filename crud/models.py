@@ -20,7 +20,7 @@ class Instructor(User):
     total_learners = models.IntegerField()
 
     # Create a toString method for object string representation
-    def ___str__(self):
+    def __str__(self):
         return "First name: " + self.first_name + ", " + \
                "Last name: " + self.last_name + ", " + \
                "Is full time: " + str(self.full_time) + ", " + \
@@ -64,7 +64,7 @@ class Course(models.Model):
     learners = models.ManyToManyField(Learner, through='Enrollment')
 
     # Create a toString method for object string representation
-    def ___str__(self):
+    def __str__(self):
         return "Name: " + self.name + ", " + \
                "Description: " + self.description
 
